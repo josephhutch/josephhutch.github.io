@@ -137,7 +137,7 @@ main {
 }
 
 #stage{
-    background: url('background.png') center center no-repeat scroll;
+    background: url('../images/background.png') center center no-repeat scroll;
     background-size: cover;
     color: #333;
     display: flex;
