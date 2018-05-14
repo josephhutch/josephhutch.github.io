@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://josephhutch.com/posts/aether-theme/</loc>
+    <lastmod>2018-05-02T14:33:42-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://josephhutch.com/posts/</loc>
+    <lastmod>2018-04-27T10:04:01-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://josephhutch.com/</loc>
+    <lastmod>2018-04-27T09:46:15-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://josephhutch.com/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://josephhutch.com/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://josephhutch.com/categories/web-dev/</loc>
+    <lastmod>2018-05-02T14:33:42-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

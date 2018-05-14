@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Aether: A Clean Theme for Hugo &middot; josephhutch</title>
+  <meta name="description" content=" Aether is new theme for Hugo that emphasizes motion, depth, and material as design elements. Distracting styling and page elements are forgone to focus on the content." />
+  
+  <link rel="icon" type="image/x-icon" href="http://josephhutch.com/img/favicon.ico">
+  
+  <link rel="icon" type="image/png" href="http://josephhutch.com/img/favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" />
+  <link rel="stylesheet" href="http://josephhutch.com/css/style.css" />
+  <link rel="stylesheet" href="http://josephhutch.com/css/xcode.css" />
+  <link rel="stylesheet" href="http://josephhutch.com/css/latolatinfonts.css" />
+</head>
+  <body class="single-body">
+    <nav class="nav-bar side-padding">
+  <h1 class="nav-header"><a href="/" class="nav-text">josephhutch</a></h1>
+  <div class="hamburger-menu">
+		<input type="checkbox" onclick="hamburgerMenuPressed()"/>
+		<span></span>
+		<span></span>
+    <ul class="hamburger-menu-overlay">
+			<li><a href="/" class="hamburger-menu-overlay-link">Home</a></li>
+      
+			<li><a href="/categories/web-dev" class="hamburger-menu-overlay-link">Web dev</a></li>
+			
+    </ul>
+  </div>
+</nav>
+    <main class="content side-text-padding">
+      <article class="post">
+        <header class="post-header">
+        	<h1 class="post-title">Aether: A Clean Theme for Hugo</h1>
+          <p class="post-date">Posted <time datetime="0001-01-01 11:00">Jan 1, 0001</time></p>
+        </header>
+        
+        <figure class="post-figure">
+          <img src="http://josephhutch.com/img/mdd-macbook.jpg">
+        </figure>
+        
+        
+
+<p>When I&rsquo;m browsing the web, all too often I deal with pop-ups, intrusive banners, and ads obstructing the content.  I designed Aether to be the style of website I want to visit on the web.  The result is a theme that makes sites feels more like a native application than a website. Interactions are intuitive, content is the focus, and distractions are omitted.  Aether is a Hugo theme for blogs that elevates good writing and photography.  If you use Hugo for your blog, give Aether a try.</p>
+
+<h2 id="installation">Installation</h2>
+
+<p>In your Hugo project&rsquo;s theme directory, clone the Aether repo.</p>
+
+<pre><code class="language-bash">git clone https://github.com/josephhutch/aether.git
+</code></pre>
+
+<p>Add the following parameters in your config file if they are not present already.</p>
+
+<pre><code class="language-toml">baseURL = &quot;https://yourwebsitenamegoeshere.com/&quot;
+languageCode = &quot;Your language code&quot;
+title = &quot;Your Website Title&quot;
+theme = &quot;aether&quot;
+
+[params]
+description = &quot;Your website's description.&quot;
+homeimg = &quot;url to the image used for the home button&quot;
+</code></pre>
+
+<p>You&rsquo;re all set!  Once your begin writing posts, they will display using the Aether theme.</p>
+
+<p><img src="/img/mdd-iphone.jpg" alt="Aether theme displayed on an iphone" title="Aether on iPhone" /></p>
+
+<p>To learn more about Aether visit <a href="https://github.com/josephhutch/aether">Aether&rsquo;s Github page</a>.  To learn more about Hugo visit <a href="https://gohugo.io/">Hugo&rsquo;s website</a>.</p>
+
+      </article>
+      
+    </main>
+    <nav class="end-nav side-padding">
+      
+      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
+  href="/" class="card home-card" style="background-image: url(/img/grey-cloud.jpg)" rel="bookmark" >
+  Home
+</a>
+    </nav>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="http://josephhutch.com/js/core.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+  </body>
+</html>
