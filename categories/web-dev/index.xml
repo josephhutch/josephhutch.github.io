@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Web Dev on joehutch</title>
-    <link>https://joehutch.com/categories/web-dev/</link>
+    <link>https://www.joehutch.com/categories/web-dev/</link>
     <description>Recent content in Web Dev on joehutch</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 02 May 2018 14:33:42 -0400</lastBuildDate>
     
-	<atom:link href="https://joehutch.com/categories/web-dev/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.joehutch.com/categories/web-dev/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Aether: A Clean Theme for Hugo</title>
-      <link>https://joehutch.com/posts/aether-theme/</link>
+      <link>https://www.joehutch.com/posts/aether-theme/</link>
       <pubDate>Wed, 02 May 2018 14:33:42 -0400</pubDate>
       
-      <guid>https://joehutch.com/posts/aether-theme/</guid>
+      <guid>https://www.joehutch.com/posts/aether-theme/</guid>
       <description>When I&amp;rsquo;m browsing the web, all too often I deal with pop-ups, intrusive banners, and ads obstructing the content. I designed Aether to be the style of website I want to visit on the web. The result is a theme that makes sites feels more like a native application than a website. Interactions are intuitive, content is the focus, and distractions are omitted. Aether is a Hugo theme for blogs that elevates good writing and photography.</description>
     </item>
     
