@@ -50,9 +50,11 @@
           <p class="post-date">Posted <time datetime="2018-05-02">May 2, 2018</time></p>
         </header>
         
-        <figure class="post-figure">
+        <picture class="post-figure">
+            <source srcset="https://www.joehutch.com/img/mdd-macbook.webp" type="image/webp">
+            <source srcset="https://www.joehutch.com/img/mdd-macbook.jpg">
           <img src="https://www.joehutch.com/img/mdd-macbook.jpg" alt="A Macbook showing a website using the aether theme">
-        </figure>
+        </picture>
         
         
 
@@ -245,17 +247,29 @@ alert(s);
 
 <h4 id="images">Images</h4>
 
-<pre><code class="language-md">![aether theme displayed on an iPhone](/img/mdd-iphone.jpg &quot;aether on iPhone&quot;)
+<pre><code class="language-md">![aether theme displayed on an iPhone](img/mdd-iphone.jpg)
+
+&lt;!--- OR with webp support ... --&gt;
+
+{{&lt; image src=&quot;img/mdd-iphone.jpg&quot; alt=&quot;aether theme displayed on an iPhone&quot; &gt;}}
 </code></pre>
 
-<p><img src="/img/mdd-iphone.jpg" alt="aether theme displayed on an iPhone" title="aether on iPhone" /></p>
+<picture>
+    <source srcset="https://www.joehutch.com/img/mdd-iphone.webp" type="image/webp">
+    <source srcset="https://www.joehutch.com/img/mdd-iphone.jpg">
+    <img src="https://www.joehutch.com/img/mdd-iphone.jpg" alt="aether theme displayed on an iPhone">
+</picture>
 
 <h4 id="small-images">Small Images</h4>
 
-<pre><code class="language-md">{{&lt; smallimg src=&quot;/img/mdd-iphone.jpg&quot; alt=&quot;aether on iPhone&quot; smartfloat=&quot;left&quot; width=&quot;250px&quot; &gt;}}
+<pre><code class="language-md">{{&lt; smallimg src=&quot;img/mdd-iphone.jpg&quot; alt=&quot;aether theme displayed on an iPhone&quot; smartfloat=&quot;left&quot; width=&quot;250px&quot; &gt;}}
 </code></pre>
 
-<img src="/img/mdd-iphone.jpg" alt="aether on iPhone" class="small-img smartfloat-left" style="width: 250px;"/>
+<picture>
+    <source srcset="https://www.joehutch.com/img/mdd-iphone.webp" type="image/webp">
+    <source srcset="https://www.joehutch.com/img/mdd-iphone.jpg">
+    <img src="https://www.joehutch.com/img/mdd-iphone.jpg" alt="aether theme displayed on an iPhone" class="small-img smartfloat-left" style="width: 250px;"/>
+</picture>
 
 <p>This image floats to the left of this paragraph and is 250px wide. Its aspect ratio is maintained so it will not stretch. The picture shows aether on an iphone. You can see how the design is responsive and how the cards intelligently fit to the display. With flexbox and css grid, heavy frameworks such as bootstrap aren&rsquo;t necessary to create beautiful responsive designs. The cards in aether use flexbox to change the image from the right side on desktops to the top on mobile.</p>
 
