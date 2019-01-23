@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Technologic on Joe Hutchinson</title>
+    <title>Technologic - Joe Hutchinson</title>
     <link>https://www.joehutch.com/</link>
     <description>Recent content in Technologic on Joe Hutchinson</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 27 Apr 2018 09:46:15 -0400</lastBuildDate>
     
-	<atom:link href="https://www.joehutch.com/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://www.joehutch.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -17,10 +17,7 @@
       <pubDate>Tue, 22 May 2018 10:40:10 -0400</pubDate>
       
       <guid>https://www.joehutch.com/about-me/</guid>
-      <description>Hi. I&amp;rsquo;m Joe Hutchinson and this is my blog.
-I&amp;rsquo;m a part time master&amp;rsquo;s student at NC State University and full time engineer at John Deere. My focus is on robotics and artificial intelligence. In my free time I enjoy watching sci-fi films, exploring the outdoors, and spending time with friends.
-You can find me on GitHub at josephhutch
- </description>
+      <description></description>
     </item>
     
     <item>
@@ -29,8 +26,7 @@ You can find me on GitHub at josephhutch
       <pubDate>Wed, 02 May 2018 14:33:42 -0400</pubDate>
       
       <guid>https://www.joehutch.com/post/aether-theme/</guid>
-      <description>Today&amp;rsquo;s web is a frustrating mess of pop-ups, intrusive banners, and ads obstructing the content. I designed aether to be free of all these distractions and simply highlight the content. The result feels more like a native application than a website. Interactions are intuitive, content is the focus, and distractions are omitted.
-Aether is a Hugo theme for blogs that elevates good writing and photography. If you use Hugo for your blog, give aether a try.</description>
+      <description> Aether is new theme for Hugo that emphasizes motion, material, and depth as design elements. Distracting styling and page elements are forgone to focus on the content.</description>
     </item>
     
   </channel>
