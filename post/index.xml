@@ -10,7 +10,6 @@
     
         <atom:link href="https://www.joehutch.com/post/index.xml" rel="self" type="application/rss+xml" />
     
-    
     <item>
       <title>Aether: A Clean Theme for Hugo</title>
       <link>https://www.joehutch.com/post/aether-theme/</link>
@@ -19,6 +18,5 @@
       <guid>https://www.joehutch.com/post/aether-theme/</guid>
       <description> Aether is new theme for Hugo that emphasizes motion, material, and depth as design elements. Distracting styling and page elements are forgone to focus on the content.</description>
     </item>
-    
   </channel>
 </rss>
