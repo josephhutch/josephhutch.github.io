@@ -16,7 +16,8 @@
       <pubDate>Wed, 02 May 2018 14:33:42 -0400</pubDate>
       
       <guid>https://www.joehutch.com/post/aether-theme/</guid>
-      <description> Aether is new theme for Hugo that emphasizes motion, material, and depth as design elements. Distracting styling and page elements are forgone to focus on the content.</description>
+      <description>Aether is new theme for Hugo (a static site generator) that emphasizes motion, material, and depth as design elements. Distracting styling and page elements are forgone to focus on the content.</description>
+      
     </item>
   </channel>
 </rss>
