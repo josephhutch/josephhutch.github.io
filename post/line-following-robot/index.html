@@ -13,7 +13,11 @@
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://www.joehutch.com/css/main.min.css" />
+  
+  
+  
+  
+  <link href="https://www.joehutch.com/css/concated.min.css" rel="stylesheet">
   
   <style>
     body {
@@ -21,6 +25,7 @@
     }
   </style>
 </head>
+
   <body class="single-body">
     <nav class="nav-bar side-padding">
   <h1 class="nav-header"><a href="https://www.joehutch.com" class="nav-text">joehutch</a></h1>
@@ -76,16 +81,16 @@
 
 <picture>
     
-    <source srcset="https://www.joehutch.com/img/reflectiveOpticalSensorSchematic.png">
-    <img src="https://www.joehutch.com/img/reflectiveOpticalSensorSchematic.png" alt="Schematic for reflective light sensor" class="small-img "/>
+    <source srcset="https://www.joehutch.com/post/line-following-robot/reflectiveOpticalSensorSchematic.png">
+    <img src="https://www.joehutch.com/post/line-following-robot/reflectiveOpticalSensorSchematic.png" alt="Schematic for reflective light sensor" class="small-img "/>
 </picture>
 
 <p>To see any objects blocking the path, an ultrasonic sensor was mounted above the color sensors pointing toward the forward direction of travel. The ultrasonic sensor used was the SRF04. To have the sensor sample continuously, the SRF04&rsquo;s trigger was connected to a NE555 timer IC. The capacitors and resistors used in the NE555 circuit determine the frequency and pulse width of the output. Resistor and capacitor values were selected to achieve a 30ms period with a 1ms pulse width. This was necessary for the SRFO4 to trigger properly. The PWM output from the SRF04 was put through an RC low pass filter so that the EV3 could sample it. The ultrasonic circuit is shown below.</p>
 
 <picture>
     
-    <source srcset="https://www.joehutch.com/img/ultrasonicSensorSchematic.png">
-    <img src="https://www.joehutch.com/img/ultrasonicSensorSchematic.png" alt="Schematic for the ultrasonic sensor" class="small-img "/>
+    <source srcset="https://www.joehutch.com/post/line-following-robot/ultrasonicSensorSchematic.png">
+    <img src="https://www.joehutch.com/post/line-following-robot/ultrasonicSensorSchematic.png" alt="Schematic for the ultrasonic sensor" class="small-img "/>
 </picture>
 
 <p>With the robot constructed, sensors mounted, and PID control completed, I was proud to show off our robot during the project demonstration. Our robot raced around the track, smoothly tracking each turn, and our goal had come to light.</p>
@@ -126,9 +131,11 @@
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
     onload="renderMathInElement(document.body);"></script>
-<script src="https://www.joehutch.com/js/core.js"></script>
+  
+  <script src="https://www.joehutch.com/js/core.min.js"></script>
 <script>
   hljs.initHighlightingOnLoad();
 </script>
+
   </body>
 </html>

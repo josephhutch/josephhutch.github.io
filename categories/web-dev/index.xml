@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Web Dev - Joe Hutchinson</title>
     <link>https://www.joehutch.com/categories/web-dev/</link>
@@ -7,16 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 02 May 2018 14:33:42 -0400</lastBuildDate>
-    <atom:link href="https://www.joehutch.com/categories/web-dev/index.xml" rel="self" type="application/rss+xml" />
+    
+        <atom:link href="https://www.joehutch.com/categories/web-dev/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Aether: A Clean Theme for Hugo</title>
       <link>https://www.joehutch.com/post/aether-theme/</link>
       <pubDate>Wed, 02 May 2018 14:33:42 -0400</pubDate>
       
-      <guid isPermaLink="true">https://www.joehutch.com/post/aether-theme/</guid>
+      <guid>https://www.joehutch.com/post/aether-theme/</guid>
       <description>Aether is new theme for Hugo (a static site generator) that emphasizes motion, material, and depth as design elements. Distracting styling and page elements are forgone to focus on the content.</description>
-      <media:thumbnail url="https://www.joehutch.com/post/aether-theme/mdd-macbook.jpg" />
     </item>
   </channel>
 </rss>
