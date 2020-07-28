@@ -3,17 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://www.joehutch.com/posts/starting-ee/</loc>
-    <lastmod>2020-01-16T18:10:25-05:00</lastmod>
+    <loc>https://www.joehutch.com/posts/tkinter-dynamic-scroll-area/</loc>
+    <lastmod>2020-07-28T12:06:10-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.joehutch.com/posts/</loc>
-    <lastmod>2020-01-16T18:10:25-05:00</lastmod>
+    <lastmod>2020-07-28T12:06:10-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.joehutch.com/categories/tech/</loc>
+    <lastmod>2020-07-28T12:06:10-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.joehutch.com/posts/starting-ee/</loc>
     <lastmod>2020-01-16T18:10:25-05:00</lastmod>
   </url>
   

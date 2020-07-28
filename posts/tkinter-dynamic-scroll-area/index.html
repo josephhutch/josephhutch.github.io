@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>How to Add Scrollbars to a Dynamic GUI in TKinter &middot; Joe Hutchinson</title>
+  <meta name="description" content="When dynamically adding a widget to a GUI, you expect any scrollbars to adapt to the new size of the content area (allowing the user to scroll to the new content).  Unfortunately when developing these dynamic GUIs with Tkinter, it is not straightforward to get this behavior.  This post will show you how to get your scrollbars working so you can move on to the fun stuff." />
+  <link rel="apple-touch-icon" sizes="180x180" href="https://www.joehutch.com/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://www.joehutch.com/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://www.joehutch.com/favicon-16x16.png">
+  <link rel="manifest" href="https://www.joehutch.com/site.webmanifest">
+  <link rel="mask-icon" href="https://www.joehutch.com/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  
+  
+  
+  
+  <link href="https://www.joehutch.com/css/concated.min.css" rel="stylesheet">
+  
+  <style>
+    body {
+      background: #ecedef url("https://www.joehutch.com/img/ignasi_pattern_s.png") repeat;
+    }
+  </style>
+</head>
+
+  <body class="single-body">
+    <nav class="nav-bar side-padding">
+  <h1 class="nav-header"><a href="https://www.joehutch.com" class="nav-text">joehutch</a></h1>
+  <div class="hamburger-menu">
+    <button onclick="hamburgerMenuPressed.call(this)" aria-haspopup="true" aria-expanded="false" aria-controls="menu" aria-label="Menu">
+      <span></span>
+      <span></span>
+    </button>
+    <ul id="menu" class="hamburger-menu-overlay">
+      <li><a href="https://www.joehutch.com" class="hamburger-menu-overlay-link">Home</a></li>
+      <li><a href="https://www.joehutch.com/about-me/" class="hamburger-menu-overlay-link">About Me</a></li>
+      
+      <li><a href="https://www.joehutch.com/categories/life/" class="hamburger-menu-overlay-link">life</a></li>
+      
+      <li><a href="https://www.joehutch.com/categories/tech/" class="hamburger-menu-overlay-link">tech</a></li>
+      
+      
+    </ul>
+  </div>
+</nav>
+
+    <main class="content side-text-padding">
+      <article class="post dropcase">
+        <header class="post-header">
+          <h1 class="post-title">How to Add Scrollbars to a Dynamic GUI in TKinter</h1>
+          <p class="post-date">Posted <time datetime="2020-07-28">Jul 28, 2020</time></p>
+        </header>
+        
+        
+        <p>The scrollbars in Tkinter kind of suck..  Imagine a todo app that lists the todo items along with corresponding checkboxes in a vertical list.  When the list gets long, it might extend beyond the bottom of the window.  A scrollbar can solve that no problem, BUT, with Tkinter the scrollbars do not automatically include the new todo items in the scrollable area.  So all those super important action items are now out of reach!  Unfortunately, it&rsquo;s not straight forward to fix this issue with Tkinter and there are no examples online of how to get both vertical and horizontal scrolling working for a dynamic app.  It took me a few hours, but I developed a robust solution that will get your Tkinter todo list app, chess app, or whatever-else-your-heart-desires app scrolling properly in no time.</p>
+<p>First create the window, containers for content, and scrollbars.  The only native scrollable container in Tkinter is a canvas, so add that to the window with a frame inside.  The frame is where widgets will go since widgets can&rsquo;t be added directly to a canvas.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">root = tk.Tk()
+
+cTableContainer = tk.Canvas(root)
+fTable = tk.Frame(cTableContainer)
+sbHorizontalScrollBar = tk.Scrollbar(root)
+sbVerticalScrollBar = tk.Scrollbar(root)
+</code></pre></div><p>Now that we have the window setup, let&rsquo;s configure the scrollbars.  Attach the horizontal and vertical scrollbars to the canvas and position them at the bottom and right side of the screen where they belong.  Then bind the scroll events the the proper container.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">cTableContainer.config(xscrollcommand=sbHorizontalScrollBar.set,
+        yscrollcommand=sbVerticalScrollBar.set, highlightthickness=0)
+sbHorizontalScrollBar.config(orient=tk.HORIZONTAL, command=cTableContainer.xview)
+sbVerticalScrollBar.config(orient=tk.VERTICAL, command=cTableContainer.yview)
+
+sbHorizontalScrollBar.pack(fill=tk.X, side=tk.BOTTOM, expand=tk.FALSE)
+sbVerticalScrollBar.pack(fill=tk.Y, side=tk.RIGHT, expand=tk.FALSE)
+cTableContainer.pack(fill=tk.BOTH, side=tk.LEFT, expand=tk.TRUE)
+cTableContainer.create_window(0, 0, window=fTable, anchor=tk.NW)
+</code></pre></div><p>Finally, here is the magic function that updates the scrollable area.  Just call it when you add a new widget to the frame.  This took me well over any hour of reading the docs and forums to come up with.  I&rsquo;ll spare you the misery.</p>
+<div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#00f">def</span> <span style="color:#c34e00">updateScrollRegion</span>():
+	cTableContainer.update_idletasks()
+	cTableContainer.config(scrollregion=fTable.bbox())
+</code></pre></div><p>Those are the building blocks you need to get your scrollbars working in a GUI with dynamically added widgets.  The gist below puts all the pieces together in an example app that shows both scrollbars updating the scrollable area while &ldquo;hello world&rdquo; labels are added across the screen.  Try it out yourself!</p>
+<script type="application/javascript" src="https://gist.github.com/josephhutch/5fafbbe66db2e695a246fa99306b0420.js"></script>
+
+<p>When you run the gist, you will see a window that looks like the one below with a new label being added every second.  The scrollbars will adjust when the new label is added so that you can scroll to them.</p>
+<p><img src="tkinter_scroll_example_app.png" alt="Tkinter dynamic scroll example app"></p>
+<p>If you found <a href="https://gist.github.com/josephhutch/5fafbbe66db2e695a246fa99306b0420">the above gist</a> helpful, give it a star so other developers in a scrolling crisis can find it :)</p>
+
+      </article>
+      
+    </main>
+    <nav class="end-nav side-padding">
+      
+      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
+  href="https://www.joehutch.com/posts/starting-ee/" class="card blog-card" rel="bookmark" >
+  
+  <div class="card-img-container">
+    <p class="card-img-overlay">Next Article</p>
+    <picture>
+      
+      <source srcset="https://www.joehutch.com/posts/starting-ee/eeLabEquipment.jpg">
+      <img src="https://www.joehutch.com/posts/starting-ee/eeLabEquipment.jpg" class="card-img" alt="EE lab equipment spread across a desk">
+    </picture>
+  </div>
+  
+  <article class="card-body">
+    <h2 class="card-title">A Letter to Those Starting Electrical Engineering</h2>
+    <p class="card-text">Electrical Engineering is an exciting, rewarding career choice.  For those who enjoy physics and logic it is a perfect fit.  Here is the advice I wish I knew when starting my EE journey.</p>
+    <div class="card-subtext muted-text">
+      <p>Posted <time datetime="2020-01-16 116:00">Jan 16, 2020</time></p>
+      <p>#tech </p>
+    </div>
+  </article>
+</a>
+      
+      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
+  href="https://www.joehutch.com" class="card home-card" style="background-image: url( https://www.joehutch.com/img/grey-cloud.jpg )" rel="bookmark" >
+  Home
+</a>
+    </nav>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+  
+  <script src="https://www.joehutch.com/js/core.min.js"></script>
+
+  </body>
+</html>
