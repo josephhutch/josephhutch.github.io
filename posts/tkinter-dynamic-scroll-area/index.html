@@ -33,6 +33,8 @@
       <li><a href="https://www.joehutch.com" class="hamburger-menu-overlay-link">Home</a></li>
       <li><a href="https://www.joehutch.com/about-me/" class="hamburger-menu-overlay-link">About Me</a></li>
       
+      <li><a href="https://www.joehutch.com/categories/creativity/" class="hamburger-menu-overlay-link">creativity</a></li>
+      
       <li><a href="https://www.joehutch.com/categories/life/" class="hamburger-menu-overlay-link">life</a></li>
       
       <li><a href="https://www.joehutch.com/categories/tech/" class="hamburger-menu-overlay-link">tech</a></li>
@@ -58,7 +60,7 @@ cTableContainer = tk.Canvas(root)
 fTable = tk.Frame(cTableContainer)
 sbHorizontalScrollBar = tk.Scrollbar(root)
 sbVerticalScrollBar = tk.Scrollbar(root)
-</code></pre></div><p>Now that we have the window setup, let&rsquo;s configure the scrollbars.  Attach the horizontal and vertical scrollbars to the canvas and position them at the bottom and right side of the screen where they belong.  Then bind the scroll events the the proper container.</p>
+</code></pre></div><p>Now that we have the window setup, let&rsquo;s configure the scrollbars.  Attach the horizontal and vertical scrollbars to the canvas and position them at the bottom and right side of the screen where they belong.  Then bind the scroll events to the proper container.</p>
 <div class="highlight"><pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">cTableContainer.config(xscrollcommand=sbHorizontalScrollBar.set,
         yscrollcommand=sbVerticalScrollBar.set, highlightthickness=0)
 sbHorizontalScrollBar.config(orient=tk.HORIZONTAL, command=cTableContainer.xview)
@@ -107,7 +109,7 @@ cTableContainer.create_window(0, 0, window=fTable, anchor=tk.NW)
 </a>
       
     </nav>
-    <footer class="side-padding">
+    <footer class="side-padding" style="background-image: url('https://www.joehutch.com/img/home-blob-flip.svg');">
     <a href="https://www.joehutch.com" class="footer-link">
     
         <img class="footer-icon" src="https://www.joehutch.com/icons/home-page.png">
