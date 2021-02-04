@@ -75,13 +75,11 @@
 <picture class="small-pic ">
     
     
-    
         <source srcset="https://www.joehutch.com/posts/line-following-robot/reflectiveOpticalSensorSchematic.png">
         <img src="https://www.joehutch.com/posts/line-following-robot/reflectiveOpticalSensorSchematic.png" class="small-img " alt="Schematic for reflective light sensor" />
 </picture>
 <p>To see any objects blocking the path, an ultrasonic sensor was mounted above the color sensors pointing toward the forward direction of travel. The ultrasonic sensor used was the SRF04. To have the sensor sample continuously, the SRF04&rsquo;s trigger was connected to a NE555 timer IC. The capacitors and resistors used in the NE555 circuit determine the frequency and pulse width of the output. Resistor and capacitor values were selected to achieve a 30ms period with a 1ms pulse width. This was necessary for the SRFO4 to trigger properly. The PWM output from the SRF04 was put through an RC low pass filter so that the EV3 could sample it. The ultrasonic circuit is shown below.</p>
 <picture class="small-pic ">
-    
     
     
         <source srcset="https://www.joehutch.com/posts/line-following-robot/ultrasonicSensorSchematic.png">
